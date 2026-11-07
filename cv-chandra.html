@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CV Chandra Rizky Prabawa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=JetBrains+Mono:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: sticky device-style header, hero with a star-topology diagram (Chandra as the hub), then label + content rows per section */
+:root{
+  --bg:#EDF1F6; --surface:#FAFBFD; --ink:#0E1A2B; --muted:#4A5A70; --line:#CCD6E2;
+  --accent:#1B5FD6; --accent-ink:#FFFFFF; --signal:#E2A900; --led:#1C9A5E;
+  --ph-bg:rgba(226,169,0,.22); --grid:rgba(14,26,43,.06);
+  --font-display:'Chakra Petch','Trebuchet MS',sans-serif;
+  --font-body:'Public Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0A111D; --surface:#111B2B; --ink:#E7EDF6; --muted:#9AA9BD; --line:#22324A;
+    --accent:#6FA4FF; --accent-ink:#0A111D; --signal:#F5C542; --led:#3DDC97;
+    --ph-bg:rgba(245,197,66,.18); --grid:rgba(231,237,246,.06);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0A111D; --surface:#111B2B; --ink:#E7EDF6; --muted:#9AA9BD; --line:#22324A;
+  --accent:#6FA4FF; --accent-ink:#0A111D; --signal:#F5C542; --led:#3DDC97;
+  --ph-bg:rgba(245,197,66,.18); --grid:rgba(231,237,246,.06);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--font-body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--font-display);margin:0;text-wrap:balance}
+p{margin:0}
+.in{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.ph{background:var(--ph-bg);border-radius:4px;padding:0 .3em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.top .in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 20px;padding-block:10px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;letter-spacing:.04em;color:var(--ink);text-decoration:none}
+.brand b{display:grid;place-items:center;width:38px;height:38px;border:2px solid var(--ink);border-radius:8px;font-size:.85rem;letter-spacing:.02em}
+.nav{display:flex;gap:2px;overflow-x:auto;min-width:0;order:3;width:100%;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{padding:8px 12px;border-radius:8px;color:var(--muted);text-decoration:none;font-weight:500;font-size:.95rem;white-space:nowrap}
+.nav a:hover{color:var(--ink);background:var(--surface)}
+.tbtn{font:500 .85rem var(--font-mono);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;cursor:pointer}
+.tbtn:hover{border-color:var(--accent)}
+@media (min-width:860px){.nav{order:2;width:auto}.tbtn{order:3}.top .in{flex-wrap:nowrap}}
+
+/* hero */
+.hero{border-bottom:1px solid var(--line);background-image:linear-gradient(to right,var(--grid) 1px,transparent 1px),linear-gradient(to bottom,var(--grid) 1px,transparent 1px);background-size:32px 32px}
+.hero .in{display:grid;gap:40px;padding-block:56px 64px;align-items:center}
+@media (min-width:900px){.hero .in{grid-template-columns:1.1fr .9fr;gap:56px;padding-block:80px 88px}}
+.hero-copy{min-width:0;display:flex;flex-direction:column;gap:22px}
+.status{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;font:500 .82rem var(--font-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 14px}
+.led{width:9px;height:9px;border-radius:50%;background:var(--led);box-shadow:0 0 0 3px color-mix(in srgb,var(--led) 25%,transparent)}
+h1{font-size:clamp(2.5rem,7.2vw,4.75rem);line-height:1.02;font-weight:700;letter-spacing:-.01em}
+.role{font-family:var(--font-display);font-weight:500;font-size:clamp(1.1rem,2.2vw,1.4rem);color:var(--accent)}
+.lead{max-width:56ch;color:var(--muted);font-size:1.15rem}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font:500 .85rem var(--font-mono);color:var(--ink);border:1px solid var(--ink);border-radius:6px;padding:5px 10px}
+.topo{width:100%;max-width:520px;height:auto;justify-self:center}
+.cable-base{stroke:var(--line);stroke-width:3;fill:none}
+.cable{stroke:var(--accent);stroke-width:3;stroke-dasharray:2 10;stroke-linecap:round;fill:none}
+@media (prefers-reduced-motion:no-preference){.cable{animation:flow 1.6s linear infinite}}
+@keyframes flow{to{stroke-dashoffset:-24}}
+.node{fill:var(--surface);stroke:var(--ink);stroke-width:2}
+.hub{fill:var(--accent)}
+.hub-t{fill:var(--accent-ink);font-family:var(--font-display);font-weight:700;font-size:30px;text-anchor:middle}
+.hub-s{fill:var(--accent-ink);font-family:var(--font-mono);font-size:13px;text-anchor:middle;letter-spacing:.06em}
+.cap{font-family:var(--font-mono);font-size:12.5px;fill:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.ttl{font-family:var(--font-display);font-weight:600;font-size:19px;fill:var(--ink)}
+.port{fill:var(--signal)}
+
+/* sections */
+.sec{border-bottom:1px solid var(--line)}
+.sec .in{display:grid;gap:20px;padding-block:52px}
+@media (min-width:860px){.sec .in{grid-template-columns:230px 1fr;gap:48px;padding-block:64px}}
+.sec h2{font-size:clamp(1.6rem,3vw,2.1rem);font-weight:700}
+.body{min-width:0;display:flex;flex-direction:column;gap:20px}
+.body p{max-width:64ch}
+.dl{display:grid;gap:0;margin:0;border-top:1px solid var(--line)}
+.dl div{display:grid;gap:2px 24px;padding:14px 0;border-bottom:1px solid var(--line)}
+@media (min-width:600px){.dl div{grid-template-columns:200px 1fr}}
+.dl dt{font:500 .8rem var(--font-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.dl dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.card-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;align-items:baseline}
+.card h3{font-size:1.35rem;font-weight:600}
+.meta{font:500 .85rem var(--font-mono);color:var(--muted)}
+.brandchip{font:500 .8rem var(--font-mono);letter-spacing:.12em;color:var(--accent-ink);background:var(--accent);border-radius:6px;padding:4px 10px}
+.card ul{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:8px}
+.group{display:flex;flex-direction:column;gap:12px}
+.group h3{font-size:1rem;font-weight:600;color:var(--muted);letter-spacing:.02em}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 16px;font-weight:500;font-size:.98rem}
+.chip.learning{border-style:dashed}
+.copy{margin-left:12px;font:500 .78rem var(--font-mono);color:var(--accent);background:transparent;border:1px solid var(--accent);border-radius:6px;padding:3px 10px;cursor:pointer;vertical-align:middle}
+.copy:hover{background:var(--accent);color:var(--accent-ink)}
+footer{padding-block:32px 40px}
+footer .in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;color:var(--muted);font:400 .85rem var(--font-mono)}
+</style>
+
+</head>
+<body>
+<header class="top">
+  <div class="in">
+    <a class="brand" href="#atas" aria-label="Ke bagian atas"><b>CRP</b><span>Chandra R. Prabawa</span></a>
+    <nav class="nav" aria-label="Bagian halaman">
+      <a href="#tentang">Tentang</a>
+      <a href="#pendidikan">Pendidikan</a>
+      <a href="#pengalaman">Pengalaman</a>
+      <a href="#keahlian">Keahlian</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <button class="tbtn" id="themeBtn" type="button" aria-label="Ganti tema terang atau gelap">tema</button>
+  </div>
+</header>
+
+<main id="atas">
+  <section class="hero">
+    <div class="in">
+      <div class="hero-copy">
+        <p class="status"><span class="led" aria-hidden="true"></span>Semester 1 · RKS 1 B</p>
+        <h1>Chandra Rizky Prabawa</h1>
+        <p class="role">Mahasiswa Rekayasa Keamanan Siber</p>
+        <p class="lead">Dasar saya ada di jaringan komputer: bersertifikat Cisco dan pernah bekerja sebagai teknisi jaringan. Sekarang saya belajar mengamankan jaringan dan sistem.</p>
+        <div class="tags">
+          <span class="tag">Teknik Informatika dan Komputer</span>
+          <span class="tag">Cisco</span>
+          <span class="tag">Teknisi Jaringan</span>
+        </div>
+      </div>
+
+      <svg class="topo" viewBox="0 0 520 440" role="img" aria-label="Diagram topologi bintang: Chandra di tengah, terhubung ke sertifikasi Cisco, pengalaman teknisi jaringan, dan program studi Rekayasa Keamanan Siber">
+        <path class="cable-base" d="M260 210 L260 92"/>
+        <path class="cable-base" d="M260 210 L103 348"/>
+        <path class="cable-base" d="M260 210 L417 348"/>
+        <path class="cable" d="M260 160 L260 92"/>
+        <path class="cable" d="M225 237 L103 348"/>
+        <path class="cable" d="M295 237 L417 348"/>
+        <circle class="hub" cx="260" cy="210" r="52"/>
+        <text class="hub-t" x="260" y="212">CRP</text>
+        <text class="hub-s" x="260" y="236">RKS 1 B</text>
+
+        <rect class="node" x="165" y="20" width="190" height="72" rx="12"/>
+        <text class="cap" x="181" y="46">Sertifikasi</text>
+        <text class="ttl" x="181" y="73">CISCO</text>
+        <circle class="port" cx="260" cy="92" r="5"/>
+
+        <rect class="node" x="8" y="348" width="190" height="72" rx="12"/>
+        <text class="cap" x="24" y="374">Pengalaman</text>
+        <text class="ttl" x="24" y="401">Teknisi Jaringan</text>
+        <circle class="port" cx="103" cy="348" r="5"/>
+
+        <rect class="node" x="322" y="348" width="190" height="72" rx="12"/>
+        <text class="cap" x="338" y="374">Prodi · Rekayasa</text>
+        <text class="ttl" x="338" y="401">Keamanan Siber</text>
+        <circle class="port" cx="417" cy="348" r="5"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="sec" id="tentang">
+    <div class="in">
+      <h2>Tentang saya</h2>
+      <div class="body">
+        <p>Saya Chandra Rizky Prabawa, mahasiswa semester 1 program studi Rekayasa Keamanan Siber di jurusan Teknik Informatika dan Komputer, kelas RKS 1 B.</p>
+        <p>Latar belakang saya di jaringan komputer meliputi sertifikat Cisco dan pengalaman sebagai teknisi jaringan. Di perkuliahan, saya mempelajari cara melindungi jaringan dan sistem dari serangan, dengan pengalaman lapangan itu sebagai pegangan.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="pendidikan">
+    <div class="in">
+      <h2>Pendidikan</h2>
+      <div class="body">
+        <dl class="dl">
+          <div><dt>Kampus</dt><dd>Politeknik Negeri Jakarta</dd></div>
+          <div><dt>Jurusan</dt><dd>Teknik Informatika dan Komputer</dd></div>
+          <div><dt>Program studi</dt><dd>Rekayasa Keamanan Siber</dd></div>
+          <div><dt>Kelas</dt><dd>RKS 1 B</dd></div>
+          <div><dt>Semester</dt><dd>1 (sedang berjalan)</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="pengalaman">
+    <div class="in">
+      <h2>Pengalaman</h2>
+      <div class="body">
+        <article class="card">
+          <div class="card-head">
+            <h3>Teknisi Jaringan</h3>
+            <span class="meta">Agustus 2024 sampai Maret 2026</span>
+          </div>
+          <p class="meta">MEGA COPILAS, Jakarta Selatan</p>
+          <ul>
+            <li>Memasang dan mengonfigurasi perangkat jaringan, seperti router, switch, dan access point.</li>
+            <li>Mengatasi gangguan koneksi dengan memeriksa kabel, perangkat, dan pengaturan jaringan sampai kembali normal.</li>
+            <li>Hasil: jaringan tetap stabil untuk kegiatan harian dan gangguan tertangani lebih cepat.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="keahlian">
+    <div class="in">
+      <h2>Keahlian</h2>
+      <div class="body">
+        <div class="group">
+          <h3>Jaringan komputer</h3>
+          <div class="chips">
+            <span class="chip">Dasar jaringan (Cisco)</span>
+            <span class="chip">Konfigurasi perangkat jaringan</span>
+            <span class="chip">Troubleshooting jaringan</span>
+          </div>
+        </div>
+        <div class="group">
+          <h3>Keamanan siber, sedang dipelajari di semester 1</h3>
+          <div class="chips">
+            <span class="chip learning">Dasar keamanan siber</span>
+            <span class="chip learning">Keamanan jaringan</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="kontak">
+    <div class="in">
+      <h2>Kontak</h2>
+      <div class="body">
+        <dl class="dl">
+          <div><dt>Email</dt><dd><span id="email">chandrarizkyprabawa@gmail.com</span><button class="copy" type="button" data-copy="email">salin</button></dd></div>
+          <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/chandra-rizky-prabawa-1a234a448" target="_blank" rel="noopener">linkedin.com/in/chandra-rizky-prabawa-1a234a448</a></dd></div>
+          <div><dt>Lokasi</dt><dd>Tangerang Selatan, Banten</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="in"><span>Chandra Rizky Prabawa</span><span>RKS 1 B · Rekayasa Keamanan Siber</span></div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  function current(){
+    var t=root.getAttribute('data-theme');
+    if(t) return t;
+    return window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+  }
+  function label(){ btn.textContent = current()==='dark' ? 'tema: gelap' : 'tema: terang'; }
+  try{ var saved=localStorage.getItem('cv-theme'); if(saved) root.setAttribute('data-theme',saved); }catch(e){}
+  label();
+  btn.addEventListener('click',function(){
+    var next=current()==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{ localStorage.setItem('cv-theme',next); }catch(e){}
+    label();
+  });
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.addEventListener('click',function(){
+      var el=document.getElementById(b.getAttribute('data-copy'));
+      var text=el.textContent.trim();
+      function done(){ b.textContent='tersalin'; setTimeout(function(){ b.textContent='salin'; },1600); }
+      function select(){ var r=document.createRange(); r.selectNodeContents(el); var s=window.getSelection(); s.removeAllRanges(); s.addRange(r); }
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(done,select);
+      } else { select(); }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
